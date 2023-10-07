@@ -19,7 +19,7 @@ const Login = () => {
     };
     try {
       const response = await signIn("credentials", data);
-      console.log(response);
+
       if (response?.status === 401) {
         showErrorToast(response?.error!); // Display the error message
       } else {
@@ -70,6 +70,16 @@ const Login = () => {
           Login
         </button>
 
+        <hr className="mt-4" />
+        <div className="flex items-center my-4 justify-center">
+          <button
+            type="button"
+            className="btn btn-primary  "
+            onClick={() => signIn("google")}
+          >
+            Login with Google
+          </button>
+        </div>
         <hr className="mt-4" />
 
         <p className="text-center mt-5">

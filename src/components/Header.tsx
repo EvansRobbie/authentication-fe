@@ -7,7 +7,7 @@ import React from "react";
 const Header = () => {
   const { status, data } = useSession();
   const { showSuccessToast } = useCustomToast();
-  // console.log(data?.user);
+  // console.log(data?.user.access);
   return (
     <div className="navbar bg-base-100 ">
       <div className="navbar-start">
